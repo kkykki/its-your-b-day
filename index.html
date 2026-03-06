@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Project</title>
+<style>
+  body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:black;
+  }
+  img, video{
+    max-width:80%;
+    cursor:pointer;
+  }
+  video{
+    display:none;
+  }
+</style>
+</head>
+
+<body>
+
+<img id="thumbnail" src="thumbnail.jpg">
+<video id="video" controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<script>
+document.getElementById("thumbnail").onclick = function(){
+  this.style.display="none";
+  document.getElementById("video").style.display="block";
+  document.getElementById("video").play();
+}
+</script>
+
+</body>
+</html>
